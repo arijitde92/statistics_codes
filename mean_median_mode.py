@@ -7,11 +7,7 @@ Output: mean value
         mode value
 """
 number_of_inputs = int(input())
-number_list = input()
-str_numbers = number_list.split(' ')
-numbers = list()
-for str_number in str_numbers:
-    numbers.append(int(str_number))
+numbers = [int(n) for n in input().split()]
 numbers.sort()
 median = 0
 if number_of_inputs % 2 == 0:
