@@ -1,0 +1,11 @@
+from statistics import mean
+import math
+n=int(input())
+arr=[int(x) for x in input().split()]
+arr.sort()
+mean_val = mean(arr)
+squares = list()
+for num in arr:
+    squares.append((num-mean_val)*(num-mean_val))
+standard_dev = math.sqrt(sum(squares)/n)
+print(standard_dev)
